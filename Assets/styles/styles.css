@@ -1,0 +1,93 @@
+﻿body {
+    font-family: georgia, serif;
+}
+
+h3, h4, h5, h6 {
+color: #185360;
+}
+h1, h2, h3, h4, h5, h6 {
+font-weight: normal;
+letter-spacing: -1px;
+text-transform: lowercase;
+}
+
+.site-header {
+    /*color: #F2EFDC;*/
+
+    background: #fff url('../images/light2.gif') 0px 1px repeat-x;
+}
+
+.user-status a a:visited {
+    color: orangered;
+}
+
+.user-status a:active a:hover {
+    color: red;
+}
+
+.site-status {
+    margin-top: 10px;
+    /*color: white;*/
+}
+
+.site-footer {
+    background-color: #F3EEDA;
+    color: #404040;
+}
+
+.site-footer footer {
+    margin: 10px;   
+}
+
+.site-body {
+    color: #404040;
+}
+
+    .site-body h3, h4 {
+        border-bottom: dotted 1px #E1E1E1;
+       position: relative;
+    }
+.site-username-status {
+    list-style-type: none;
+    display: inline;
+}
+
+.site-login {
+    
+}
+
+.home-consumer {
+    /*background-color: #888888;*/
+}
+
+.home-contractor {
+    /*background-color:#888666;*/
+}
+
+.dashboard-btn {
+    margin-top: 15px;
+}
+
+.thumbnail_max_size {
+    max-height: 100px;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.top-menu {
+     padding-top:5px;
+}
+.top-menu a {
+    margin-left: 0.5em;
+    display: block;
+    padding: 1.0em 1.3em 0.8em 1.3em;
+    background: #fff url('../images/light4.gif') repeat-x;
+    border: solid 1px #fff;
+    color: #616161;
+    font-weight: bold;
+    font-size: 0.8em;
+    text-transform: lowercase;
+    text-decoration: none;
+}
