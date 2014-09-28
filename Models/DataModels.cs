@@ -1,13 +1,18 @@
 ﻿using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using Newtonsoft.Json;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
+using System.Web.Script.Serialization;
 
 namespace CssTemplatesForFree.Models
 {
@@ -40,9 +45,15 @@ namespace CssTemplatesForFree.Models
 
     public class cssTemplate
     {
+        public cssTemplate()
+        {
+            this.dateAdded = DateTime.UtcNow;
+        }
+
         [Key]
         public int id { get; set; }
         public string name { get; set; }
+        public string previewUrl { get; set; }
         public string imageFile { get; set; }
         public DateTime dateAdded { get; set; }
     }
@@ -52,6 +63,7 @@ namespace CssTemplatesForFree.Models
         public DBContext()
             : base("csstemplatesforfreeDB")
         {
+            Database.SetInitializer(new DBInitializer());
 
         }
         //Override default table names
@@ -81,7 +93,23 @@ namespace CssTemplatesForFree.Models
     {
         protected override void Seed(DBContext context)
         {
-            
+            var filePath = Path.Combine(HttpContext.Current.Request.PhysicalApplicationPath, "default-csstemplates.json");
+            using (var r = new StreamReader(filePath))
+            {
+                string json = r.ReadToEnd();
+                dynamic array = JsonConvert.DeserializeObject(json);
+                foreach (var k in array)
+                {
+                    context.cssTemplates.Add(
+                                            new cssTemplate
+                                            {
+                                                name = k.name,
+                                                imageFile = k.thumbnail,
+                                                previewUrl = k.preview
+                                            });
+                }
+                context.SaveChanges();
+            }
         }
     }
 }
