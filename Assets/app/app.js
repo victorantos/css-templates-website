@@ -7,7 +7,10 @@ var app = angular.module('app', [
     'home',
     'signIn',
     'register',
-    'csstemplates'
+    'csstemplates',
+    'contact',
+    'license',
+    'ads'
 ]);
 
 app.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($routeProvider, $locationProvider, $httpProvider) {

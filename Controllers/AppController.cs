@@ -36,6 +36,11 @@ namespace csstemplatesforfree.com.Controllers
         {
             return PartialView();
         }
+        public ActionResult License()
+        {
+            return PartialView();
+        }
+
         [Authorize]
         public ActionResult TodoManager()
         {
