@@ -4,9 +4,9 @@ using System.Linq;
 using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartup(typeof(csstemplatesforfree.com.Startup))]
+[assembly: OwinStartup(typeof(CssTemplatesForFree.Startup))]
 
-namespace csstemplatesforfree.com
+namespace CssTemplatesForFree
 {
     public partial class Startup
     {

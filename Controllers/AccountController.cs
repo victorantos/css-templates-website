@@ -13,11 +13,11 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
-using csstemplatesforfree.com.Models;
-using csstemplatesforfree.com.Providers;
-using csstemplatesforfree.com.Results;
+using CssTemplatesForFree.Models;
+using CssTemplatesForFree.Providers;
+using CssTemplatesForFree.Results;
 
-namespace csstemplatesforfree.com.Controllers
+namespace CssTemplatesForFree.Controllers
 {
     [Authorize]
     [RoutePrefix("api/Account")]

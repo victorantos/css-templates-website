@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace csstemplatesforfree.com.Models
+namespace CssTemplatesForFree.Models
 {
     // Models returned by AccountController actions.
 

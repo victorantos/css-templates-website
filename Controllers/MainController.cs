@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace csstemplatesforfree.com.Controllers
+namespace CssTemplatesForFree.Controllers
 {
     public class MainController : Controller
     {

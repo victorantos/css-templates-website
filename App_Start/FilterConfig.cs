@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace csstemplatesforfree.com
+namespace CssTemplatesForFree
 {
     public class FilterConfig
     {

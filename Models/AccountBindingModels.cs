@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
 
-namespace csstemplatesforfree.com.Models
+namespace CssTemplatesForFree.Models
 {
     // Models used as parameters to AccountController actions.
 

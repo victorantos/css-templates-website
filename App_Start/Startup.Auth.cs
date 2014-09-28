@@ -7,10 +7,10 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
-using csstemplatesforfree.com.Providers;
-using csstemplatesforfree.com.Models;
+using CssTemplatesForFree.Providers;
+using CssTemplatesForFree.Models;
 
-namespace csstemplatesforfree.com
+namespace CssTemplatesForFree
 {
     public partial class Startup
     {

@@ -7,7 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
 
-namespace csstemplatesforfree.com.Results
+namespace CssTemplatesForFree.Results
 {
     public class ChallengeResult : IHttpActionResult
     {

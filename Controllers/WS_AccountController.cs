@@ -1,4 +1,4 @@
-﻿using csstemplatesforfree.com.Models;
+﻿using CssTemplatesForFree.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
@@ -10,7 +10,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 
-namespace csstemplatesforfree.com.Controllers
+namespace CssTemplatesForFree.Controllers
 {
     public class WS_AccountController : ApiController
     {

@@ -9,9 +9,9 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
-using csstemplatesforfree.com.Models;
+using CssTemplatesForFree.Models;
 
-namespace csstemplatesforfree.com.Providers
+namespace CssTemplatesForFree.Providers
 {
     public class ApplicationOAuthProvider : OAuthAuthorizationServerProvider
     {

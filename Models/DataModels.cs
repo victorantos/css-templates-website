@@ -9,7 +9,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace csstemplatesforfree.com.Models
+namespace CssTemplatesForFree.Models
 {
     public class User : IdentityUser
     {

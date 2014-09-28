@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace csstemplatesforfree.com
+namespace CssTemplatesForFree
 {
     public class BundleConfig
     {
