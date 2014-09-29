@@ -193,7 +193,6 @@
     <Content Include="Assets\app\controllers\csstemplatesCtrl.js" />
     <Content Include="Assets\app\controllers\adsCtrl.js" />
     <Content Include="Assets\app\controllers\homeCtrl.js" />
-    <Content Include="Assets\app\controllers\light3.gif" />
     <Content Include="Assets\app\controllers\mainCtrl.js" />
     <Content Include="Assets\app\controllers\registerCtrl.js" />
     <Content Include="Assets\app\controllers\signInCtrl.js" />

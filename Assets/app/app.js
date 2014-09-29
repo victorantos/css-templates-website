@@ -35,6 +35,8 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($r
         }
     }]);
     
+    $locationProvider.hashPrefix('!');
+
     //================================================
     // Routes
     //================================================
