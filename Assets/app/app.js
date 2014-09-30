@@ -7,10 +7,11 @@ var app = angular.module('app', [
     'home',
     'signIn',
     'register',
-    'csstemplates',
+    'cssTemplates',
     'contact',
     'license',
-    'ads'
+    'ads',
+    'cssTemplateDetail'
 ]);
 
 app.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($routeProvider, $locationProvider, $httpProvider) {
@@ -54,7 +55,7 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($r
     });
     $routeProvider.when('/csstemplates', {
         templateUrl: 'App/CssTemplates',
-        controller: 'csstemplatesCtrl'
+        controller: 'cssTemplatesCtrl'
     });
     $routeProvider.when('/ads', {
         templateUrl: 'App/Ads',
@@ -72,14 +73,25 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($r
         templateUrl: 'App/License',
         controller: 'licenseCtrl'
     });
-    $routeProvider.otherwise({
+    $routeProvider.when('/csstemplate/:cssTemplateId', {
+        hideSideBar : true,
+        templateUrl: 'App/CssTemplateDetail',
+        controller: 'cssTemplateDetailCtrl'
+    });
+    $routeProvider.otherwise({  
         redirectTo: '/'
     });    
 }]);
-
-app.run(['$http', '$cookies', '$cookieStore', function ($http, $cookies, $cookieStore) {
+ 
+app.run(['$http', '$cookies', '$cookieStore', '$location', '$rootScope', function ($http, $cookies, $cookieStore,$location, $rootScope) {
     //If a token exists in the cookie, load it after the app is loaded, so that the application can maintain the authenticated state.
     $http.defaults.headers.common.Authorization = 'Bearer ' + $cookieStore.get('_Token');
+ 
+    $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+        $rootScope.hideSideBar = current.$$route ? current.$$route.hideSideBar : false;
+    });
+
+   
 }]);
 
 

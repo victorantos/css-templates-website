@@ -23,11 +23,12 @@
             });
         }
 
-        $scope.$on('$locationChangeSuccess', function (event) {
+        $scope.$on('$locationChangeSuccess', function (event, current, previous) {
             //possiblity of updating token on this request.  This could be the keepalive function.
-            $scope.getUserName();
+            $scope.getUserName(); 
         });
 
         //On Load, get the username
         $scope.getUserName();
+      
     }]);

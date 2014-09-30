@@ -40,6 +40,10 @@ namespace CssTemplatesForFree.Controllers
         {
             return PartialView();
         }
+        public ActionResult CssTemplateDetail()
+        {
+            return PartialView();
+        }
 
         [Authorize]
         public ActionResult TodoManager()

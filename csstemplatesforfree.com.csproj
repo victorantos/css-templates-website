@@ -188,9 +188,10 @@
   <ItemGroup>
     <Content Include="Assets\app\app.js" />
     <Content Include="Assets\app\controllers\aboutCtrl.js" />
+    <Content Include="Assets\app\controllers\cssTemplateDetailCtrl.js" />
     <Content Include="Assets\app\controllers\licenseCtrl.js" />
     <Content Include="Assets\app\controllers\contactCtrl.js" />
-    <Content Include="Assets\app\controllers\csstemplatesCtrl.js" />
+    <Content Include="Assets\app\controllers\cssTemplatesCtrl.js" />
     <Content Include="Assets\app\controllers\adsCtrl.js" />
     <Content Include="Assets\app\controllers\homeCtrl.js" />
     <Content Include="Assets\app\controllers\mainCtrl.js" />
@@ -289,6 +290,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bower.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\App\CssTemplateDetail.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Main\_SideBar.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

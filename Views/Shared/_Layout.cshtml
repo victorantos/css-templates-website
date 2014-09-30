@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html ng-app="app">
+<html ng-app="app" >
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -8,8 +8,65 @@
     @Styles.Render("~/styles")
 </head>
 <body>
-    @RenderBody()
-    
+    <div class="container-fluid">
+
+        <header class="row site-header" ng-controller="mainCtrl">
+            <nav class="col-md-10 col-md-offset-1">
+                <div class="row">
+                    <ul class="list-inline top-menu">
+                        <li>
+                            <a href="#!/home">Home</a>
+                        </li>
+                        <li>
+                            <a href="#!/csstemplates">Css templates</a>
+                        </li>
+                        <li>
+                            <a href="#!/bin">Bin</a>
+                        </li>
+                        <li>
+                            <a href="#!/contact">Contact</a>
+                        </li>
+                        <li ng-show="loggedIn">
+                            <a href="" ng-click="logout()">{{username}} | Sign Out</a>
+                        </li>
+                        <li ng-hide="loggedIn">
+                            <a href="#!/signin">Sign In</a>
+                        </li>
+                        <li ng-hide="loggedIn">
+                            <a href="#!/register">Register</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="site-body row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="row">
+                    <div class=" col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                        @RenderBody()
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                        @RenderSection("SideBar", false)
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row site-footer">
+            <div class="col-md-10 col-md-offset-1">
+                <footer>
+                    <div class="text-center">
+                        © 2007-2014 CssTemplatesForFree.
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
 
     @Scripts.Render("~/ng")
     @Scripts.Render("~/app")

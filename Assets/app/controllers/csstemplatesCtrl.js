@@ -1,5 +1,5 @@
-﻿angular.module('csstemplates', [])
-    .controller('csstemplatesCtrl', ['$scope', '$http', function ($scope, $http) {
+﻿angular.module('cssTemplates', [])
+    .controller('cssTemplatesCtrl', ['$scope', '$http', function ($scope, $http) {
         $scope.alert = function () {
             alert("WOW");
         }
