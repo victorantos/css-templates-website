@@ -56,6 +56,16 @@ namespace CssTemplatesForFree.Models
         public string previewUrl { get; set; }
         public string imageFile { get; set; }
         public DateTime dateAdded { get; set; }
+
+        public object toCssTemplateDto()
+        {
+            return new
+            {
+                name = this.name,
+                imageFile = this.imageFile,
+                previewUrl = this.previewUrl
+            };
+        }
     }
 
     public class DBContext : IdentityDbContext<User>

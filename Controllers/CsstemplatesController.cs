@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CssTemplatesForFree.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -7,13 +8,14 @@ using System.Web.Http;
 
 namespace CssTemplatesForFree.Controllers
 {
-    [Authorize]
-    public class ValuesController : ApiController
+    public class CsstemplatesController : ApiController
     {
-        // GET api/values
-        public IEnumerable<string> Get()
+        DBContext db = new DBContext();
+        // GET api/csstemplates
+        public IEnumerable<object> Get()
         {
-            return new string[] { "value1", "value2" };
+            return (from c in db.cssTemplates select  c)
+                .ToList().Select(c =>  c.toCssTemplateDto());
         }
 
         // GET api/values/5
