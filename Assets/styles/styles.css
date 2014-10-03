@@ -3,17 +3,17 @@
 }
 
 h3, h4, h5, h6 {
-color: #185360;
+    color: #185360;
 }
+
 h1, h2, h3, h4, h5, h6 {
-font-weight: normal;
-letter-spacing: -1px;
-text-transform: lowercase;
+    font-weight: normal;
+    letter-spacing: -1px;
+    text-transform: lowercase;
 }
 
 .site-header {
     /*color: #F2EFDC;*/
-
     background: #fff url('../images/light2.gif') 0px 1px repeat-x;
 }
 
@@ -35,9 +35,9 @@ text-transform: lowercase;
     color: #404040;
 }
 
-.site-footer footer {
-    margin: 10px;   
-}
+    .site-footer footer {
+        margin: 10px;
+    }
 
 .site-body {
     color: #404040;
@@ -45,15 +45,15 @@ text-transform: lowercase;
 
     .site-body h3, h4 {
         border-bottom: dotted 1px #E1E1E1;
-       position: relative;
+        position: relative;
     }
+
 .site-username-status {
     list-style-type: none;
     display: inline;
 }
 
 .site-login {
-    
 }
 
 .home-consumer {
@@ -73,21 +73,26 @@ text-transform: lowercase;
 }
 
 .strike {
-  text-decoration: line-through;
+    text-decoration: line-through;
 }
 
 .top-menu {
-     padding-top:5px;
+    padding-top: 5px;
 }
-.top-menu a {
-    margin-left: 0.5em;
-    display: block;
-    padding: 1.0em 1.3em 0.8em 1.3em;
-    background: #fff url('../images/light4.gif') repeat-x;
-    border: solid 1px #fff;
-    color: #616161;
-    font-weight: bold;
-    font-size: 0.8em;
-    text-transform: lowercase;
-    text-decoration: none;
+
+    .top-menu a {
+        margin-left: 0.5em;
+        display: block;
+        padding: 1.0em 1.3em 0.8em 1.3em;
+        background: #fff url('../images/light4.gif') repeat-x;
+        border: solid 1px #fff;
+        color: #616161;
+        font-weight: bold;
+        font-size: 0.8em;
+        text-transform: lowercase;
+        text-decoration: none;
+    }
+
+.home-template {
+    padding-bottom: 20px;
 }

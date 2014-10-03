@@ -8,17 +8,15 @@
 </p>
  
 <div class="row">
-    <div class="col-lg-3 col-md-3 col-sm-6" ng-repeat="line in primeTemplates">
+    <div class="col-lg-4 col-md-4 col-sm-6 home-template" ng-repeat="line in primeTemplates">
         <div class="img-thumbnail">
             <a href="previewcsstemplate.aspx?csstemplateName=edgy" title="edgy - css template">
                 <img ng-src='{{line.imageFile}}' class="img-responsive" alt="Preview of &quot;edgy&quot; CSS Template">
             </a>
-            <br /><span class="template-title text-center">Template {{line.name}}</span><br />
+            <br /><span class="template-title text-center">Template name: <strong>{{line.name}}</strong></span><br />
             <span><a href="previewcsstemplate.aspx?csstemplateName=edgy" id="previewCssTemplate" title="Live preview of &quot;edgy&quot; css template">Css template</a> | <a href="zipHandler.ashx?csstemplateName=edgy" id="downloadCssTemplateLink" title="Download &quot;edgy&quot; css template for free">Download</a></span>
-
         </div>
     </div>
-
 </div>
 @*<br />
 <div class="row">

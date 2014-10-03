@@ -219,17 +219,6 @@
     <Content Include="Assets\images\light3.gif" />
     <Content Include="Assets\images\light4.gif" />
     <Content Include="Assets\images\somerights20.png" />
-    <Content Include="Assets\images\thumbnailHandler1.jpg" />
-    <Content Include="Assets\images\thumbnailHandler10.jpg" />
-    <Content Include="Assets\images\thumbnailHandler11.jpg" />
-    <Content Include="Assets\images\thumbnailHandler2.jpg" />
-    <Content Include="Assets\images\thumbnailHandler3.jpg" />
-    <Content Include="Assets\images\thumbnailHandler4.jpg" />
-    <Content Include="Assets\images\thumbnailHandler5.jpg" />
-    <Content Include="Assets\images\thumbnailHandler6.jpg" />
-    <Content Include="Assets\images\thumbnailHandler7.jpg" />
-    <Content Include="Assets\images\thumbnailHandler8.jpg" />
-    <Content Include="Assets\images\thumbnailHandler9.jpg" />
     <Content Include="Assets\jquery\jquery.min.js" />
     <Content Include="Assets\misc\modernizr.min.js" />
     <Content Include="Assets\misc\respond.min.js" />
