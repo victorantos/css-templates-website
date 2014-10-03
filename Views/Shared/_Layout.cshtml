@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html ng-app="app" >
+<html ng-app="app">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -47,9 +47,11 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                         @RenderSection("SideBar", false)
-
                     </div>
+
                 </div>
+                <div class="row">@RenderSection("PreviewCsstemplate", false)</div>
+
             </div>
         </div>
         <div class="row site-footer">

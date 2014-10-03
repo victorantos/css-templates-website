@@ -73,8 +73,14 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($r
         templateUrl: 'App/License',
         controller: 'licenseCtrl'
     });
+    $routeProvider.when('/csstemplate/preview/:cssTemplateId', {
+        showPreviewPage: true,
+        hideSideBar: true,
+        templateUrl: 'App/CssTemplateDetail',
+        controller: 'cssTemplateDetailCtrl'
+    });
     $routeProvider.when('/csstemplate/:cssTemplateId', {
-        hideSideBar : true,
+        hideSideBar: true,
         templateUrl: 'App/CssTemplateDetail',
         controller: 'cssTemplateDetailCtrl'
     });
@@ -89,6 +95,7 @@ app.run(['$http', '$cookies', '$cookieStore', '$location', '$rootScope', functio
  
     $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
         $rootScope.hideSideBar = current.$$route ? current.$$route.hideSideBar : false;
+        $rootScope.showPreviewPage = current.$$route ? current.$$route.showPreviewPage : false;
     });
 
    
