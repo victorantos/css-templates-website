@@ -13,9 +13,14 @@
             <a href="previewcsstemplate.aspx?csstemplateName=edgy" title="edgy - css template">
                 <img ng-src='{{line.imageFile}}' class="img-responsive" alt="Preview of &quot;edgy&quot; CSS Template">
             </a>
-            <br /><span class="template-title text-center">Template name: <strong>{{line.name}}</strong></span><br />
-            <span class="template-title text-center">Template description: <strong>{{line.description}}</strong></span><br />
-            <span><a href="previewcsstemplate.aspx?csstemplateName=edgy" id="previewCssTemplate" title="Live preview of &quot;edgy&quot; css template">Css template</a> | <a href="zipHandler.ashx?csstemplateName=edgy" id="downloadCssTemplateLink" title="Download &quot;edgy&quot; css template for free">Download</a></span>
+            <dl class="dl-horizontal">
+                <dt>Template name: </dt>
+                <dd>{{line.name}}</dd>
+                <dt>Description: </dt>
+                <dd>{{line.description}}</dd>
+                <dt></dt>
+                <dd><a href="previewcsstemplate.aspx?csstemplateName=edgy" id="previewCssTemplate" title="Live preview of &quot;edgy&quot; css template">Css template</a> | <a href="zipHandler.ashx?csstemplateName=edgy" id="downloadCssTemplateLink" title="Download &quot;edgy&quot; css template for free">Download</a></dd>
+            </dl>
         </div>
     </div>
 </div>

@@ -96,3 +96,16 @@ h1, h2, h3, h4, h5, h6 {
 .home-template {
     padding-bottom: 20px;
 }
+.img-thumbnail dl.dl-horizontal {
+    margin-top: 3px;
+    margin-bottom: auto;
+}
+.img-thumbnail .dl-horizontal dt {
+    width: auto;
+    padding-right: 5px;
+}
+
+.img-thumbnail .dl-horizontal dd {
+    width: auto;
+    margin-left: auto;
+}
