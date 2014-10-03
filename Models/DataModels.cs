@@ -53,9 +53,11 @@ namespace CssTemplatesForFree.Models
         [Key]
         public int id { get; set; }
         public string name { get; set; }
+        public string description { get; set; }
         public string previewUrl { get; set; }
         public string imageFile { get; set; }
         public DateTime dateAdded { get; set; }
+
 
         public object toCssTemplateDto()
         {
@@ -63,7 +65,8 @@ namespace CssTemplatesForFree.Models
             {
                 name = this.name,
                 imageFile = this.imageFile,
-                previewUrl = this.previewUrl
+                previewUrl = this.previewUrl,
+                description = this.description
             };
         }
     }
@@ -103,23 +106,7 @@ namespace CssTemplatesForFree.Models
     {
         protected override void Seed(DBContext context)
         {
-            var filePath = Path.Combine(HttpContext.Current.Request.PhysicalApplicationPath, "default-csstemplates.json");
-            using (var r = new StreamReader(filePath))
-            {
-                string json = r.ReadToEnd();
-                dynamic array = JsonConvert.DeserializeObject(json);
-                foreach (var k in array)
-                {
-                    context.cssTemplates.Add(
-                                            new cssTemplate
-                                            {
-                                                name = k.name,
-                                                imageFile = k.thumbnail,
-                                                previewUrl = k.preview
-                                            });
-                }
-                context.SaveChanges();
-            }
+           
         }
     }
 }

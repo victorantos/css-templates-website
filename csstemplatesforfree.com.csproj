@@ -177,6 +177,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\Helpers.cs" />
     <Compile Include="Migrations\201409281952394_InitialCreate.cs" />
     <Compile Include="Migrations\201409281952394_InitialCreate.Designer.cs">
       <DependentUpon>201409281952394_InitialCreate.cs</DependentUpon>
@@ -184,6 +185,10 @@
     <Compile Include="Migrations\201410021428194_addedcsstempaltetbl.cs" />
     <Compile Include="Migrations\201410021428194_addedcsstempaltetbl.Designer.cs">
       <DependentUpon>201410021428194_addedcsstempaltetbl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201410031022529_addedDescField.cs" />
+    <Compile Include="Migrations\201410031022529_addedDescField.Designer.cs">
+      <DependentUpon>201410031022529_addedDescField.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -302,6 +307,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201410021428194_addedcsstempaltetbl.resx">
       <DependentUpon>201410021428194_addedcsstempaltetbl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410031022529_addedDescField.resx">
+      <DependentUpon>201410031022529_addedDescField.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
