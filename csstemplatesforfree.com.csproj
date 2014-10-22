@@ -237,6 +237,7 @@
     <Content Include="test\e2e\scenarios.js" />
     <Content Include="test\karma.conf.js" />
     <Content Include="test\protractor-conf.js" />
+    <Content Include="test\unit\controllersSpec.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -253,7 +254,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="test\unit\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

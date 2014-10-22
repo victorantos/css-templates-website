@@ -8,4 +8,6 @@
         }
 
         $scope.getPrimeTemplates();
+        $scope.defaultTemplates = ['prime'];
+
     }]);
