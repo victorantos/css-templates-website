@@ -50,5 +50,10 @@ namespace CssTemplatesForFree.Controllers
         {
             return PartialView();
         }
+        
+        public ActionResult _RecentlyViewed()
+        {
+            return PartialView();
+        }
     }
 }

@@ -11,7 +11,8 @@ var app = angular.module('app', [
     'contact',
     'license',
     'ads',
-    'cssTemplateDetail'
+    'cssTemplateDetail',
+    'csstemplates.service'
 ]);
 
 app.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($routeProvider, $locationProvider, $httpProvider) {
