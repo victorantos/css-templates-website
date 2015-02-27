@@ -33,7 +33,8 @@ namespace CssTemplatesForFree.Migrations
                 dynamic array = JsonConvert.DeserializeObject(json);
                 foreach (var k in array)
                 {
-                    context.cssTemplates.Add(
+                    context.cssTemplates.AddOrUpdate(
+                                            p=>p.name,
                                             new cssTemplate
                                             {
                                                 name = k.name,

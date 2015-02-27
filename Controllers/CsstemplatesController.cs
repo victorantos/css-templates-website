@@ -11,17 +11,22 @@ namespace CssTemplatesForFree.Controllers
     public class CsstemplatesController : ApiController
     {
         DBContext db = new DBContext();
-        // GET api/csstemplates
-        public IEnumerable<object> Get()
+
+         // GET api/csstemplates
+        public object Get()
         {
-            return (from c in db.cssTemplates select  c)
-                .ToList().Select(c =>  c.toCssTemplateDto());
+            return Get(1);
         }
 
-        // GET api/values/5
-        public string Get(int id)
+        // GET api/csstemplates
+        public object Get(int? p)
         {
-            return "value";
+            if (!p.HasValue)
+                p = 1;
+            int pagesize = 9;
+            var list = db.cssTemplates.Select(c => c).OrderBy(r => r.id).Skip((p.Value - 1) * pagesize).Take(pagesize);
+
+            return new { list = list.ToList().Select(c => c.toCssTemplateDto()), total = db.cssTemplates.Count(), pagesize = pagesize};
         }
 
         // POST api/values

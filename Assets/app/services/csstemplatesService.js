@@ -8,6 +8,14 @@
 
     var factory = {};
     
+    factory.browseTemplates = function (page) {
+        var results = $http.get('/api/Csstemplates/get?p=' + page)
+           .then(function (resp) {
+               return resp;
+           });
+        return results;
+    };
+
     factory.recentlyViewed = function () {
         return recentlyViewed;
     };

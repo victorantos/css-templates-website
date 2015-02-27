@@ -1,4 +1,38 @@
 ﻿
 <h3>css templates (page 1 of 31 )</h3>
 
- 
+<nav>
+    <ul class="pager">
+        <li class="previous"><a href="#"><span aria-hidden="true">&larr;</span> Previous</a></li>
+        <li class="next"><a href="#">Next <span aria-hidden="true">&rarr;</span></a></li>
+    </ul>
+</nav>
+
+<div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-6 home-template" ng-repeat="line in templates">
+        <div class="img-thumbnail">
+            <a href="#!/csstemplate/preview/{{line.name}}" title="{{line.name}} - bootstrap template">
+                <img ng-src='{{line.imageFile}}' class="img-responsive" alt="Preview of &quot;edgy&quot; CSS Template">
+            </a>
+            <dl class="dl-horizontal">
+                <dt>Bootstrap template: </dt>
+                <dd>{{line.name}}</dd>
+                <dt>Description: </dt>
+                <dd>{{line.description}}</dd>
+                <dt>Free: </dt>
+                <dd><a href="#!/csstemplate/preview/{{line.name}}" id="previewCssTemplate" title="Live preview of &quot;edgy&quot; css template">Css template</a> | <a href="zipHandler.ashx?csstemplateName=edgy" id="downloadCssTemplateLink" title="Download &quot;edgy&quot; css template for free">Download</a></dd>
+            </dl>
+        </div>
+    </div>
+</div>
+
+<nav ng-show="pageCount() > 1">
+    <ul class="pagination">
+        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+        @*<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>*@
+
+        <li ng-repeat="item in pages()"><a href="#">{{item}}</a></li>
+
+        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+    </ul>
+</nav>
