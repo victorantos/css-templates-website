@@ -3,8 +3,12 @@
 
 <nav>
     <ul class="pager">
-        <li class="previous"><a href="#"><span aria-hidden="true">&larr;</span> Previous</a></li>
-        <li class="next"><a href="#">Next <span aria-hidden="true">&rarr;</span></a></li>
+        <li class="previous">
+            <a href="/#!/csstemplates/{{(page > 0 ? 'page='+ (page-1): '')}}" ng-show="page > 1"><span aria-hidden="true">&larr;</span> Previous</a>
+        </li>
+        <li class="next">
+            <a href="/#!/csstemplates/{{(page > 0 ? 'page='+ (page+1): '')}}">Next <span aria-hidden="true">&rarr;</span></a>
+        </li>
     </ul>
 </nav>
 
@@ -28,11 +32,13 @@
 
 <nav ng-show="pageCount() > 1">
     <ul class="pagination">
-        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+        <li ng-show="page > 1">
+            <a href="/#!/csstemplates/{{(page > 0 ? 'page='+ (page-1): '')}}" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+        </li>
         @*<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>*@
 
-        <li ng-repeat="item in pages()"><a href="#">{{item}}</a></li>
+        <li ng-repeat="item in pages()"><a href="/#!/csstemplates/page={{item}}">{{item}}</a></li>
 
-        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+        <li><a href="/#!/csstemplates/{{(page > 0 ? 'page='+ (page+1): '')}}" aria-label="Next"><span aria-hidden="true">»</span></a></li>
     </ul>
 </nav>

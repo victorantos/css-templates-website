@@ -54,10 +54,15 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($r
         templateUrl: 'App/SignIn',
         controller: 'signInCtrl'
     });
+    $routeProvider.when('/csstemplates/page=:page', {
+        templateUrl: 'App/CssTemplates',
+        controller: 'cssTemplatesCtrl'
+    });
     $routeProvider.when('/csstemplates', {
         templateUrl: 'App/CssTemplates',
         controller: 'cssTemplatesCtrl'
     });
+
     $routeProvider.when('/ads', {
         templateUrl: 'App/Ads',
         controller: 'adsCtrl'
