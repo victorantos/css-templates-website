@@ -7,7 +7,7 @@
             <a href="/#!/csstemplates/{{(page > 0 ? 'page='+ (page-1): '')}}" ng-show="page > 1"><span aria-hidden="true">&larr;</span> Previous</a>
         </li>
         <li class="next">
-            <a href="/#!/csstemplates/{{(page > 0 ? 'page='+ (page+1): '')}}">Next <span aria-hidden="true">&rarr;</span></a>
+            <a href="/#!/csstemplates/{{(page > 0 ? 'page='+ (page+1): '')}}" ng-show="page< pageCount()">Next <span aria-hidden="true">&rarr;</span></a>
         </li>
     </ul>
 </nav>
@@ -39,6 +39,6 @@
 
         <li ng-repeat="item in pages()"><a href="/#!/csstemplates/page={{item}}">{{item}}</a></li>
 
-        <li><a href="/#!/csstemplates/{{(page > 0 ? 'page='+ (page+1): '')}}" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+        <li><a href="/#!/csstemplates/{{(page > 0 ? 'page='+ (page+1): '')}}" ng-show="page< pageCount()" aria-label="Next"><span aria-hidden="true">»</span></a></li>
     </ul>
 </nav>
