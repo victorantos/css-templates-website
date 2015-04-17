@@ -28,6 +28,19 @@ namespace CssTemplatesForFree.Controllers
 
             return new { list = list.ToList().Select(c => c.toCssTemplateDto()), total = db.cssTemplates.Count(), pagesize = pagesize};
         }
+        
+
+        // GET api/csstemplates
+     
+        public object GetByTemplateName(string name)
+        {
+            if (!string.IsNullOrEmpty(name))
+            {
+                var list = db.cssTemplates.Where(c => c.name.Equals(name, StringComparison.InvariantCultureIgnoreCase));
+                return new { list = list.ToList().Select(c => c.toCssTemplateDto()) };
+            }
+            return null;
+        }
 
         // POST api/values
         public void Post([FromBody]string value)

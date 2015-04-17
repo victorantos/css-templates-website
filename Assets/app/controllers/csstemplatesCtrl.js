@@ -4,6 +4,7 @@
         $scope.itemsPerPage = 5;
         $scope.page = isNaN(parseInt($routeParams["page"])) ? 1 : parseInt($routeParams["page"]);
         $scope.total = 0;
+
         $scope.getPrimeTemplates = function () {
             csstemplates.browseTemplates($scope.page).then(function (resp) {
                 $scope.templates = resp.data.list; 

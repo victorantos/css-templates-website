@@ -5,15 +5,28 @@
     
     var recentlyViewed = [];
     var maxRecentlyViewed = 5;
-
+    var loadedTemplates = null;
     var factory = {};
     
     factory.browseTemplates = function (page) {
         var results = $http.get('/api/Csstemplates/get?p=' + page)
            .then(function (resp) {
+               loadedTemplates = resp.data.list;
                return resp;
            });
         return results;
+    };
+    factory.byTemplateName = function (template) {
+        var results = $http.get('/api/Csstemplates/GetByTemplateName?name=' + template)
+           .then(function (resp) {
+               loadedTemplates = resp.data.list;
+               return resp;
+           });
+        return results;
+    };
+
+    factory.getLoadedTemplates = function () {
+        return loadedTemplates;
     };
 
     factory.recentlyViewed = function () {

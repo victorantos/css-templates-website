@@ -95,13 +95,15 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($r
     });    
 }]);
  
-app.run(['$http', '$cookies', '$cookieStore', '$location', '$rootScope', function ($http, $cookies, $cookieStore,$location, $rootScope) {
+app.run(['$http', '$cookies', '$cookieStore', '$location', '$rootScope', function ($http, $cookies, $cookieStore, $location, $rootScope) {
     //If a token exists in the cookie, load it after the app is loaded, so that the application can maintain the authenticated state.
     $http.defaults.headers.common.Authorization = 'Bearer ' + $cookieStore.get('_Token');
  
     $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+        //(ev, to, toParams, from, fromParams)
         $rootScope.hideSideBar = current.$$route ? current.$$route.hideSideBar : false;
         $rootScope.showPreviewPage = current.$$route ? current.$$route.showPreviewPage : false;
+        $rootScope.previous = $location.$$url;
     });
 
    
