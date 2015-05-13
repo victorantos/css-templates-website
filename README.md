@@ -7,3 +7,8 @@ This is a website that provides a collection of css templates for download. It's
 
 =======================
 The database is automatically created when the first user is registered.
+
+Todo
+==
++  Download csstemplate handler
++  9 random templates on the homepage
