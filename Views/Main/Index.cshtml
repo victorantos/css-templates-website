@@ -1,4 +1,9 @@
-﻿<div ng-view> </div>
+﻿@section PreviewCsstemplate{
+    <div ng-show="showPreviewPage">
+        @Html.Partial("_PreviewCsstemplate")
+    </div>
+}
+<div ng-view> </div>
 
 @section SideBar{
     <div ng-hide="hideSideBar">
@@ -6,8 +11,3 @@
     </div>
 }
 
-@section PreviewCsstemplate{
-    <div ng-show="showPreviewPage">
-        @Html.Partial("_PreviewCsstemplate")
-    </div>
-}
